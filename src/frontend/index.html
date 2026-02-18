@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Today Bookings</h1>
+    <div id="status-banner" class="banner">Checking system...</div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Create Appointment</h2>
+      <form id="create-form">
+        <input name="client_name" placeholder="Client name" required />
+        <input name="service_name" placeholder="Service" required />
+        <label>Start <input name="starts_at" type="datetime-local" required /></label>
+        <label>End <input name="ends_at" type="datetime-local" required /></label>
+        <button type="submit">Create</button>
+      </form>
+      <p id="create-message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Appointments (Today)</h2>
+      <ul id="appointments"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Pending Offline Holds (Not Booked)</h2>
+      <ul id="holds"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
